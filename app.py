@@ -13,7 +13,7 @@ html_temp = """
 
 def main():
 	stc.html(html_temp)
-	menu = ["Home","EDA","ML","About"]
+	menu = ["EDA","ML","About"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
 	

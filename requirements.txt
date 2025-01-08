@@ -1,5 +1,5 @@
-matplotlib==3.2.2
-wordcloud==1.7.0
+wordcloud==1.8.2.2
+matplotlib==3.4.3
 streamlit==0.68.0
 joblib==0.16.0
 plotly==4.8.0

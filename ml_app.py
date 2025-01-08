@@ -35,7 +35,7 @@ def load_model(model_file):
 
 def run_ml():
 	st.subheader("Black Friday Sales Predictor")
-	col1,col2 = st.beta_columns(2)
+	col1,col2 = st.columns(2)
 
 	with col1:
 		gender = st.radio("Gender",("Female","Male"))

@@ -35,7 +35,7 @@ def run_eda():
 		st.subheader("Exploratory Data")
 		st.dataframe(df.head())
 
-		c1,c2 = st.beta_columns(2)
+		c1,c2 = st.columns(2)
 
 		with st.beta_expander("Descriptive Summary"):
 			st.dataframe(df.describe())

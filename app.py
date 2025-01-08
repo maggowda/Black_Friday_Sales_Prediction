@@ -27,8 +27,6 @@ def main():
 	else:
 		st.subheader("About")
 		st.info("Built with Streamlit")
-		st.text("Jesus Saves @JCharisTech")
-		st.text("Jesse E.Agbe(JCharis)")
 
 
 

@@ -37,21 +37,21 @@ def run_eda():
 
 		c1,c2 = st.columns(2)
 
-		with st.beta_expander("Descriptive Summary"):
+		with st.expander("Descriptive Summary"):
 			st.dataframe(df.describe())
 
 		with c1:
-			with st.beta_expander("Gender Distribution"):
+			with st.expander("Gender Distribution"):
 				st.dataframe(df['Gender'].value_counts())
 		with c2:
-			with st.beta_expander("Age Distribution"):
+			with st.expander("Age Distribution"):
 				st.dataframe(df['Age'].value_counts())
 
 	elif submenu == "Plots":
 		st.subheader("Plotting")
-		col1,col2 = st.beta_columns(2)
+		col1,col2 = st.columns(2)
 		with col1:
-			with st.beta_expander("Pie Chart (Gender)"):
+			with st.expander("Pie Chart (Gender)"):
 				gen_df = df['Gender'].value_counts().to_frame()
 				gen_df = gen_df.reset_index()
 				gen_df.columns = ['Gender Type','Counts']
@@ -59,7 +59,7 @@ def run_eda():
 				p01 = px.pie(gen_df,names='Gender Type',values='Counts')
 				st.plotly_chart(p01,use_container_width=True)
 
-			with st.beta_expander("City"):
+			with st.expander("City"):
 				city_df = df['City_Category'].value_counts().to_frame()
 				city_df = city_df.reset_index()
 				city_df.columns = ['Category','Counts']
@@ -69,24 +69,24 @@ def run_eda():
 
 
 		with col2:
-			with st.beta_expander("Bar Chart(Gender)"):
+			with st.expander("Bar Chart(Gender)"):
 				fig = plt.figure()
 				sns.countplot(df['Gender'])
 				st.pyplot(fig)
 
-			with st.beta_expander("Plot of Occupation"):
+			with st.expander("Plot of Occupation"):
 				fig = plt.figure()
 				sns.countplot(df['Occupation'])
 				st.pyplot(fig)
 
-		with st.beta_expander("Age"):
+		with st.expander("Age"):
 			age_df = df['Age'].value_counts().to_frame()
 			age_df = age_df.reset_index()
 			age_df.columns = ['Age Range','Counts']
 			p01 = px.bar(age_df,x='Age Range',y='Counts')
 			st.plotly_chart(p01,use_container_width=True)
 
-		with st.beta_expander("Gender vs Marital Status"):
+		with st.expander("Gender vs Marital Status"):
 			marital_df = df.groupby(['Gender','Marital_Status']).size().to_frame().reset_index()
 			marital_df.rename(columns={0:'Counts'},inplace=True)
 			po2 = px.bar(marital_df,x='Marital_Status',y='Counts',color='Gender')

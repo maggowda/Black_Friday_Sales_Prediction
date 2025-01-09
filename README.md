@@ -30,6 +30,7 @@ This dataset comprises of sales transactions captured at a retail store. It’s 
 <li>matplotlib
 <li>seaborn
 <li>scikit-learn
+<li>streamlit
 
 # Algorithms
 
@@ -37,3 +38,7 @@ This dataset comprises of sales transactions captured at a retail store. It’s 
 <li>Decision Tree
 <li>Random Forest
 <li>Extra Tress
+
+# Deployment 
+The deployment of this app is done with streamlit.
+

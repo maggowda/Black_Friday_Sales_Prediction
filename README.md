@@ -30,6 +30,7 @@ This dataset comprises of sales transactions captured at a retail store. It’s 
 <li>matplotlib
 <li>seaborn
 <li>scikit-learn
+<li>streamlit
 
 # Algorithms
 
@@ -37,3 +38,10 @@ This dataset comprises of sales transactions captured at a retail store. It’s 
 <li>Decision Tree
 <li>Random Forest
 <li>Extra Tress
+
+# Deployment 
+The deployment of this app is done with streamlit.
+
+![Screenshot 2025-01-09 074331](https://github.com/user-attachments/assets/8bb4b9bb-8391-4064-8733-8e653b67c3a1)
+
+**Live Demo:** https://blackfridaysalesprediction-va2xpfkntgfrwsx5mxb7gp.streamlit.app
